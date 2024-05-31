@@ -1,5 +1,5 @@
 ﻿Imports FalzoniVB.Domain.Entities.Registration
-Imports FalzoniVB.Domain.Interfaces.Registration
+Imports FalzoniVB.Domain.Interfaces.Repositories.Registration
 Imports FalzoniVB.Infra.Data.Context
 Imports FalzoniVB.Infra.Data.Repositories.Base
 

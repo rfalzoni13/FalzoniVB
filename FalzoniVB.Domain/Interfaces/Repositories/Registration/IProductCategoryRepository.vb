@@ -1,7 +1,7 @@
 ﻿Imports FalzoniVB.Domain.Entities.Registration
-Imports FalzoniVB.Domain.Interfaces.Base
+Imports FalzoniVB.Domain.Interfaces.Repositories.Base
 
-Namespace Interfaces.Registration
+Namespace Interfaces.Repositories.Registration
     Public Interface IProductCategoryRepository
         Inherits IBaseRepository(Of ProductCategory)
     End Interface

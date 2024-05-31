@@ -1,5 +1,5 @@
 ﻿Imports System.Data.Entity
-Imports FalzoniVB.Domain.Interfaces.Base
+Imports FalzoniVB.Domain.Interfaces.Repositories.Base
 Imports FalzoniVB.Infra.Data.Context
 Imports FalzoniVB.Infra.Data.Context.MySql
 Imports FalzoniVB.Infra.Data.Context.SqlServer

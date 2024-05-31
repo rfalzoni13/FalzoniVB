@@ -1,6 +1,6 @@
 ﻿Imports FalzoniVB.Domain.DTO.Registration
-Imports FalzoniVB.Domain.Interfaces.Base
-Imports FalzoniVB.Domain.Interfaces.Registration
+Imports FalzoniVB.Domain.Interfaces.Repositories.Base
+Imports FalzoniVB.Domain.Interfaces.Repositories.Registration
 
 Namespace Registration
     Public Class ProductService

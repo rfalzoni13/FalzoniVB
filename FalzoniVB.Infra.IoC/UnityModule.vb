@@ -2,8 +2,8 @@
 Imports FalzoniVB.Application.ServiceApplication.Identity
 Imports FalzoniVB.Application.ServiceApplication.Register
 Imports FalzoniVB.Application.ServiceApplication.Registration
-Imports FalzoniVB.Domain.Interfaces.Base
-Imports FalzoniVB.Domain.Interfaces.Registration
+Imports FalzoniVB.Domain.Interfaces.Repositories.Base
+Imports FalzoniVB.Domain.Interfaces.Repositories.Registration
 Imports FalzoniVB.Infra.Data.Context.MySql
 Imports FalzoniVB.Infra.Data.Context.SqlServer
 Imports FalzoniVB.Infra.Data.Repositories.Base

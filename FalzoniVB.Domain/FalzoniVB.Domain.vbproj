@@ -98,12 +98,12 @@
     <Compile Include="Entities\Registration\CustomerAddress.vb" />
     <Compile Include="Entities\Registration\Product.vb" />
     <Compile Include="Entities\Registration\ProductCategory.vb" />
-    <Compile Include="Interfaces\Base\IBaseRepository.vb" />
-    <Compile Include="Interfaces\Base\IUnitOfWork.vb" />
-    <Compile Include="Interfaces\Registration\ICustomerAddressRepository.vb" />
-    <Compile Include="Interfaces\Registration\ICustomerRepository.vb" />
-    <Compile Include="Interfaces\Registration\IProductCategoryRepository.vb" />
-    <Compile Include="Interfaces\Registration\IProductRepository.vb" />
+    <Compile Include="Interfaces\Repositories\Base\IBaseRepository.vb" />
+    <Compile Include="Interfaces\Repositories\Base\IUnitOfWork.vb" />
+    <Compile Include="Interfaces\Repositories\Registration\ICustomerAddressRepository.vb" />
+    <Compile Include="Interfaces\Repositories\Registration\ICustomerRepository.vb" />
+    <Compile Include="Interfaces\Repositories\Registration\IProductCategoryRepository.vb" />
+    <Compile Include="Interfaces\Repositories\Registration\IProductRepository.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

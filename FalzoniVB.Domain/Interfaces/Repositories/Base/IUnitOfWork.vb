@@ -1,6 +1,6 @@
 ﻿Imports System.Data.Entity
 
-Namespace Interfaces.Base
+Namespace Interfaces.Repositories.Base
     Public Interface IUnitOfWork
         Inherits IDisposable
 

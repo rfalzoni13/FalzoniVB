@@ -1,5 +1,5 @@
 ﻿Imports System.Data.Entity
-Imports FalzoniVB.Domain.Interfaces.Base
+Imports FalzoniVB.Domain.Interfaces.Repositories.Base
 
 Namespace Repositories.Base
     Public Class UnitOfWork

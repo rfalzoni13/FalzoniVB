@@ -1,4 +1,4 @@
-﻿Namespace Interfaces.Base
+﻿Namespace Interfaces.Repositories.Base
     Public Interface IBaseRepository(Of T As Class)
         Sub Add(obj As T)
 
