@@ -1,4 +1,6 @@
-﻿Namespace DTO.Base
+﻿Imports System
+
+Namespace DTO.Base
     Public Class BaseDTO
         Public Property Id As Guid
 

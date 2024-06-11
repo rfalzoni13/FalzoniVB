@@ -1,5 +1,5 @@
 ﻿Imports System.Threading.Tasks
-Imports FalzoniVB.Presentation.Administrator.Clients.Interfaces.Register
+Imports FalzoniVB.Presentation.Administrator.Clients.Interfaces.Configuration
 Imports FalzoniVB.Utils.Helpers
 
 Public Class UserRegisterAttribute

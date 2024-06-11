@@ -1,10 +1,10 @@
 ﻿Imports System.Net
 Imports System.Threading.Tasks
 Imports System.Web.Mvc
-Imports FalzoniVB.Presentation.Administrator.Clients.Interfaces.Registration
+Imports FalzoniVB.Presentation.Administrator.Clients.Interfaces.Register
 Imports FalzoniVB.Presentation.Administrator.Models.Common
-Imports FalzoniVB.Presentation.Administrator.Models.Registration
-Imports FalzoniVB.Presentation.Administrator.Models.Tables.Registration
+Imports FalzoniVB.Presentation.Administrator.Models.Register
+Imports FalzoniVB.Presentation.Administrator.Models.Tables.Register
 Imports FalzoniVB.Utils.Helpers
 Imports NLog
 

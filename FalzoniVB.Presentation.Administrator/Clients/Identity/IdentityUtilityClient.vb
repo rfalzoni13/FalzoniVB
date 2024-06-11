@@ -65,7 +65,7 @@ Namespace Clients.Identity
                 Dim response As HttpResponseMessage = Await client.PostAsJsonAsync(url, model)
                 If response.IsSuccessStatusCode Then
 
-                    Return Await response.Content.ReadAsStringAsync()
+                    Return Await response.Content.ReadAsAsync(Of String)()
 
                 Else
 
@@ -83,7 +83,7 @@ Namespace Clients.Identity
                 Dim response As HttpResponseMessage = Await client.PostAsJsonAsync(url, model)
                 If response.IsSuccessStatusCode Then
 
-                    Return Await response.Content.ReadAsStringAsync()
+                    Return Await response.Content.ReadAsAsync(Of String)()
 
                 Else
 
@@ -101,7 +101,7 @@ Namespace Clients.Identity
                 Dim response As HttpResponseMessage = Await client.PostAsJsonAsync(url, model)
                 If response.IsSuccessStatusCode Then
 
-                    Return Await response.Content.ReadAsStringAsync()
+                    Return Await response.Content.ReadAsAsync(Of String)()
 
                 Else
 
@@ -119,7 +119,7 @@ Namespace Clients.Identity
                 Dim response As HttpResponseMessage = Await client.PostAsJsonAsync(url, model)
                 If response.IsSuccessStatusCode Then
 
-                    Return Await response.Content.ReadAsStringAsync()
+                    Return Await response.Content.ReadAsAsync(Of String)()
 
                 Else
 

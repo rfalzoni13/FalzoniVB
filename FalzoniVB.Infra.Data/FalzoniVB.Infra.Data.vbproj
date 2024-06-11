@@ -137,10 +137,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configuration\Registration\CustomerAddressMapConfiguration.vb" />
-    <Compile Include="Configuration\Registration\CustomerMapConfiguration.vb" />
-    <Compile Include="Configuration\Registration\ProductCategoryMapConfiguration.vb" />
-    <Compile Include="Configuration\Registration\ProductMapConfiguration.vb" />
+    <Compile Include="Configuration\Register\CustomerAddressMapConfiguration.vb" />
+    <Compile Include="Configuration\Register\CustomerMapConfiguration.vb" />
+    <Compile Include="Configuration\Register\ProductCategoryMapConfiguration.vb" />
+    <Compile Include="Configuration\Register\ProductMapConfiguration.vb" />
     <Compile Include="Context\FalzoniContext.vb" />
     <Compile Include="Context\MySql\FalzoniMySqlContext.vb" />
     <Compile Include="Context\SqlServer\FalzoniSqlServerContext.vb" />
@@ -163,10 +163,10 @@
     </Compile>
     <Compile Include="Repositories\Base\BaseRepository.vb" />
     <Compile Include="Repositories\Base\UnitOfWork.vb" />
-    <Compile Include="Repositories\Registration\CustomerAddressRepository.vb" />
-    <Compile Include="Repositories\Registration\CustomerRepository.vb" />
-    <Compile Include="Repositories\Registration\ProductCategoryRepository.vb" />
-    <Compile Include="Repositories\Registration\ProductRepository.vb" />
+    <Compile Include="Repositories\Register\CustomerAddressRepository.vb" />
+    <Compile Include="Repositories\Register\CustomerRepository.vb" />
+    <Compile Include="Repositories\Register\ProductCategoryRepository.vb" />
+    <Compile Include="Repositories\Register\ProductRepository.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

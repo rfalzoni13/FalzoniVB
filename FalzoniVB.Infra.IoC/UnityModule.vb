@@ -1,14 +1,14 @@
 ﻿Imports System.Data.Entity
 Imports FalzoniVB.Application.ServiceApplication.Identity
+Imports FalzoniVB.Application.ServiceApplication.Configuration
 Imports FalzoniVB.Application.ServiceApplication.Register
-Imports FalzoniVB.Application.ServiceApplication.Registration
 Imports FalzoniVB.Domain.Interfaces.Repositories.Base
-Imports FalzoniVB.Domain.Interfaces.Repositories.Registration
+Imports FalzoniVB.Domain.Interfaces.Repositories.Register
 Imports FalzoniVB.Infra.Data.Context.MySql
 Imports FalzoniVB.Infra.Data.Context.SqlServer
 Imports FalzoniVB.Infra.Data.Repositories.Base
-Imports FalzoniVB.Infra.Data.Repositories.Registration
-Imports FalzoniVB.Service.Registration
+Imports FalzoniVB.Infra.Data.Repositories.Register
+Imports FalzoniVB.Service.Register
 Imports FalzoniVB.Utils.Helpers
 Imports Unity
 

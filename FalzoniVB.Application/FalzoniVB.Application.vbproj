@@ -133,10 +133,10 @@
     </Compile>
     <Compile Include="ServiceApplication\Identity\AccountServiceApplication.vb" />
     <Compile Include="ServiceApplication\Identity\IdentityUtilityServiceApplication.vb" />
-    <Compile Include="ServiceApplication\Register\RoleServiceApplication.vb" />
-    <Compile Include="ServiceApplication\Register\UserServiceApplication.vb" />
-    <Compile Include="ServiceApplication\Registration\CustomerServiceApplication.vb" />
-    <Compile Include="ServiceApplication\Registration\ProductServiceApplication.vb" />
+    <Compile Include="ServiceApplication\Configuration\RoleServiceApplication.vb" />
+    <Compile Include="ServiceApplication\Configuration\UserServiceApplication.vb" />
+    <Compile Include="ServiceApplication\Register\CustomerServiceApplication.vb" />
+    <Compile Include="ServiceApplication\Register\ProductServiceApplication.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

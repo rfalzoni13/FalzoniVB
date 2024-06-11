@@ -10,7 +10,7 @@
 @If TempData("Return") IsNot Nothing Then
     @<div class="row">
         <div class="col-md-12">
-            @Select Case TypeOf TempData("Return") Is FalzoniVB.Presentation.Administrator.Models.Common.ReturnModel
+            @Select Case CType(TempData("Return"), FalzoniVB.Presentation.Administrator.Models.Common.ReturnModel).Type
                 Case "Error"
                     @<div class="alert alert-back alert-danger">
                         <button type="button" class="close alert-close"><span aria-hidden="true">&times;</span></button>

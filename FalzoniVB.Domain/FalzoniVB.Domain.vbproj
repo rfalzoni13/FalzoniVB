@@ -90,20 +90,20 @@
     <Compile Include="DTO\Identity\ReturnVerifyCodeDTO.vb" />
     <Compile Include="DTO\Identity\SendCodeDTO.vb" />
     <Compile Include="DTO\Identity\VerifyCodeDTO.vb" />
-    <Compile Include="DTO\Registration\CustomerDTO.vb" />
-    <Compile Include="DTO\Registration\ProductCategoryDTO.vb" />
-    <Compile Include="DTO\Registration\ProductDTO.vb" />
+    <Compile Include="DTO\Register\CustomerDTO.vb" />
+    <Compile Include="DTO\Register\ProductCategoryDTO.vb" />
+    <Compile Include="DTO\Register\ProductDTO.vb" />
     <Compile Include="Entities\Base\BaseEntity.vb" />
-    <Compile Include="Entities\Registration\Customer.vb" />
-    <Compile Include="Entities\Registration\CustomerAddress.vb" />
-    <Compile Include="Entities\Registration\Product.vb" />
-    <Compile Include="Entities\Registration\ProductCategory.vb" />
+    <Compile Include="Entities\Register\Customer.vb" />
+    <Compile Include="Entities\Register\CustomerAddress.vb" />
+    <Compile Include="Entities\Register\Product.vb" />
+    <Compile Include="Entities\Register\ProductCategory.vb" />
     <Compile Include="Interfaces\Repositories\Base\IBaseRepository.vb" />
     <Compile Include="Interfaces\Repositories\Base\IUnitOfWork.vb" />
-    <Compile Include="Interfaces\Repositories\Registration\ICustomerAddressRepository.vb" />
-    <Compile Include="Interfaces\Repositories\Registration\ICustomerRepository.vb" />
-    <Compile Include="Interfaces\Repositories\Registration\IProductCategoryRepository.vb" />
-    <Compile Include="Interfaces\Repositories\Registration\IProductRepository.vb" />
+    <Compile Include="Interfaces\Repositories\Register\ICustomerAddressRepository.vb" />
+    <Compile Include="Interfaces\Repositories\Register\ICustomerRepository.vb" />
+    <Compile Include="Interfaces\Repositories\Register\IProductCategoryRepository.vb" />
+    <Compile Include="Interfaces\Repositories\Register\IProductRepository.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -119,7 +119,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="DTO\Registration\CustomerAddressDTO.vb" />
+    <Compile Include="DTO\Register\CustomerAddressDTO.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

@@ -1,4 +1,6 @@
-﻿Namespace Entities.Base
+﻿Imports System
+
+Namespace Entities.Base
     Public Class BaseEntity
         Public Property Id As Guid
         Public Property Created As Date

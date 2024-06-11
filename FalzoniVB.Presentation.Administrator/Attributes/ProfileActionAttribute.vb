@@ -1,6 +1,7 @@
 ﻿Imports System.Threading.Tasks
+Imports FalzoniVB.Presentation.Administrator.Clients.Interfaces.Configuration
 Imports FalzoniVB.Presentation.Administrator.Models.Common
-Imports FalzoniVB.Presentation.Administrator.Models.Register
+Imports FalzoniVB.Presentation.Administrator.Models.Configuration
 Imports FalzoniVB.Utils.Helpers
 
 Public Class ProfileActionAttribute

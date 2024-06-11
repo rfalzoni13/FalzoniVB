@@ -2,7 +2,7 @@
 Imports System.Data.Entity.ModelConfiguration
 Imports System.Data.Entity.ModelConfiguration.Conventions
 Imports System.Reflection
-Imports FalzoniVB.Domain.Entities.Registration
+Imports FalzoniVB.Domain.Entities.Register
 Imports FalzoniVB.Infra.Data.Context.MySql
 Imports FalzoniVB.Infra.Data.Context.SqlServer
 Imports FalzoniVB.Infra.Data.Identity

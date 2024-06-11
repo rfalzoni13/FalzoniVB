@@ -1,5 +1,5 @@
 ﻿Imports FalzoniVB.Presentation.Administrator.Models.Common
-Imports FalzoniVB.Presentation.Administrator.Models.Register
+Imports FalzoniVB.Presentation.Administrator.Models.Configuration
 
 Namespace Models.Identity
     Public Class ApplicationUserModel

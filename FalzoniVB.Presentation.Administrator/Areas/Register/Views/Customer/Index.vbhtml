@@ -17,8 +17,8 @@ End Section
         </h1>
         <ol class="breadcrumb">
             <li><a href="@Url.Action("Index", "Home", New With {.Area = String.Empty})"><i class="glyphicon glyphicon-home"></i> Home</a></li>
-            <li class="active"><i class="glyphicon glyphicon-edit"></i> @ViewContext.RouteData.DataTokens["area"]</li>
-            <li class="active"><i class="fa fa-user"></i> @ViewContext.RouteData.GetRequiredString("controller")</li>
+            <li class="active"><i class="glyphicon glyphicon-edit"></i> Cadastro</li>
+            <li class="active"><i class="fa fa-user"></i> Cliente</li>
         </ol>
     </section><!--section -->
     <!-- Main content -->

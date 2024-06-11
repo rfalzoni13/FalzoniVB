@@ -1,4 +1,4 @@
-﻿@ModelType FalzoniVB.Presentation.Administrator.Models.Registration.CustomerModel
+﻿@ModelType FalzoniVB.Presentation.Administrator.Models.Register.CustomerModel
 @Code
     ViewData("Title") = "Editar cliente"
     Layout = "~/Views/Shared/_Layout.vbhtml"

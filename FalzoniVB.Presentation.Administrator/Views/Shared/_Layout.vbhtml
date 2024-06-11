@@ -13,7 +13,7 @@
     @Scripts.Render("~/bundles/modernizr")
     @RenderSection("styles", required:=False)
 </head>
-<body class="hold-transition @System.Configuration.ConfigurationManager.AppSettings[" CorHeader"] sidebar-mini fixed">
+<body class="hold-transition @System.Configuration.ConfigurationManager.AppSettings("CorHeader") sidebar-mini fixed">
 
     <div class="loading">
         <div class="loader"></div>
@@ -233,18 +233,28 @@
                                             <li class="header">Menu Principal</li>
                                             <!-- Optionally, you can add icons to the links -->
                                             <li class="treeview">
-                                                <a href = "#" >
-                                                    <i class="glyphicon glyphicon-edit"></i> < span > Cadastro</span>
+                                                <a href="#">
+                                                    <i class="glyphicon glyphicon-edit"></i> <span>Cadastro</span>
                                                     <span class="pull-right-container">
                                                         <i class="fa fa-angle-left pull-right"></i>
                                                     </span>
                                                 </a>
                                                 <ul class="treeview-menu">
-                                                    <li class="@(If(ViewContext.RouteData.Values("controller").ToString() = "User", "active", String.Empty))"><a href="@Url.Action("Index", "User", New With {.area = "Register"})"><i class="fa fa-user-o"></i> Usuários</a></li>
                                                     <li class="@(If(ViewContext.RouteData.Values("controller").ToString() = "Customer", "active", String.Empty))"><a href="@Url.Action("Index", "Customer", New With {.area = "Register"})"><i class="fa fa-user-o"></i> Clientes</a></li>
                                                 </ul>
                                             </li>
-                        @*<li class="@(ViewContext.RouteData.Values("controller").ToString() == "Configuracao" ? "active" : "")"><a href="@Url.Action("Index", "Configuracao")"><i class="fa fa-gears"></i> <span>Configurações</span></a></li>*@
+                                            <li class="treeview">
+                                                <a href="#">
+                                                    <i class="glyphicon glyphicon-cog"></i> <span>Configurações</span>
+                                                    <span class="pull-right-container">
+                                                        <i class="fa fa-angle-left pull-right"></i>
+                                                    </span>
+                                                </a>
+                                                <ul class="treeview-menu">
+                                                    <li class="@(If(ViewContext.RouteData.Values("controller").ToString() = "User", "active", String.Empty))"><a href="@Url.Action("Index", "User", New With {.area = "Configuration"})"><i class="fa fa-user-o"></i> Usuários</a></li>
+                                                </ul>
+                                            </li>
+                                            @*<li class="@(ViewContext.RouteData.Values("controller").ToString() == "Configuracao" ? "active" : "")"><a href="@Url.Action("Index", "Configuracao")"><i class="fa fa-gears"></i> <span>Configurações</span></a></li>*@
                                         </ul>
                                         <!-- /.sidebar-menu -->
                                     </section>

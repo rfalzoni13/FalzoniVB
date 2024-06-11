@@ -148,8 +148,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Registration\CustomerService.vb" />
-    <Compile Include="Registration\ProductService.vb" />
+    <Compile Include="Register\CustomerService.vb" />
+    <Compile Include="Register\ProductService.vb" />
     <Compile Include="Senders\Email\EmailIdentityMessageService.vb" />
     <Compile Include="Senders\Sms\SmsTwilioMessageService.vb" />
   </ItemGroup>

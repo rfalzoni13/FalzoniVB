@@ -21,7 +21,7 @@ Namespace Clients.Base
 
                 Dim response As HttpResponseMessage = client.PostAsJsonAsync(url, obj).Result
                 If response.IsSuccessStatusCode Then
-                    Return response.Content.ReadAsStringAsync().Result
+                    Return response.Content.ReadAsAsync(Of String)().Result
                 Else
                     Dim statusCode As StatusCodeModel = response.Content.ReadAsAsync(Of StatusCodeModel)().Result
 
@@ -36,7 +36,7 @@ Namespace Clients.Base
 
                 Dim response As HttpResponseMessage = Await client.PostAsJsonAsync(url, obj)
                 If response.IsSuccessStatusCode Then
-                    Return Await response.Content.ReadAsStringAsync()
+                    Return Await response.Content.ReadAsAsync(Of String)()
                 Else
                     Dim statusCode As StatusCodeModel = Await response.Content.ReadAsAsync(Of StatusCodeModel)()
 
@@ -51,7 +51,7 @@ Namespace Clients.Base
 
                 Dim response As HttpResponseMessage = client.PutAsJsonAsync(url, obj).Result
                 If response.IsSuccessStatusCode Then
-                    Return response.Content.ReadAsStringAsync().Result
+                    Return response.Content.ReadAsAsync(Of String)().Result
                 Else
                     Dim statusCode As StatusCodeModel = response.Content.ReadAsAsync(Of StatusCodeModel)().Result
 
@@ -66,7 +66,7 @@ Namespace Clients.Base
 
                 Dim response As HttpResponseMessage = Await client.PutAsJsonAsync(url, obj)
                 If response.IsSuccessStatusCode Then
-                    Return Await response.Content.ReadAsStringAsync()
+                    Return Await response.Content.ReadAsAsync(Of String)()
                 Else
                     Dim statusCode As StatusCodeModel = Await response.Content.ReadAsAsync(Of StatusCodeModel)()
 
@@ -88,7 +88,7 @@ Namespace Clients.Base
 
                 Dim response As HttpResponseMessage = client.SendAsync(request).Result
                 If response.IsSuccessStatusCode Then
-                    Return response.Content.ReadAsStringAsync().Result
+                    Return response.Content.ReadAsAsync(Of String)().Result
                 Else
                     Dim statusCode As StatusCodeModel = response.Content.ReadAsAsync(Of StatusCodeModel)().Result
 
@@ -110,7 +110,7 @@ Namespace Clients.Base
 
                 Dim response As HttpResponseMessage = Await client.SendAsync(request)
                 If response.IsSuccessStatusCode Then
-                    Return Await response.Content.ReadAsStringAsync()
+                    Return Await response.Content.ReadAsAsync(Of String)()
                 Else
                     Dim statusCode As StatusCodeModel = Await response.Content.ReadAsAsync(Of StatusCodeModel)()
 

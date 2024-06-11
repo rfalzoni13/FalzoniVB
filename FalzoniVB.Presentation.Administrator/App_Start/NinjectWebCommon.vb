@@ -2,9 +2,8 @@
 Imports FalzoniVB.Presentation.Administrator.Clients.Identity
 Imports FalzoniVB.Presentation.Administrator.Clients.Interfaces.Base
 Imports FalzoniVB.Presentation.Administrator.Clients.Interfaces.Register
-Imports FalzoniVB.Presentation.Administrator.Clients.Interfaces.Registration
+Imports FalzoniVB.Presentation.Administrator.Clients.Interfaces.Configuration
 Imports FalzoniVB.Presentation.Administrator.Clients.Register
-Imports FalzoniVB.Presentation.Administrator.Clients.Registration
 Imports Microsoft.Web.Infrastructure.DynamicModuleHelper
 Imports Ninject
 Imports Ninject.Web.Common

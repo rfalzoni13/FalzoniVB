@@ -1,6 +1,6 @@
 ﻿@Code
     ViewData("Title") = "Home Page"
-    Layout = "~/Views/Shared/_Layout.cshtml"
+    Layout = "~/Views/Shared/_Layout.vbhtml"
 End Code
 
 <!-- Content Wrapper. Contains page content -->

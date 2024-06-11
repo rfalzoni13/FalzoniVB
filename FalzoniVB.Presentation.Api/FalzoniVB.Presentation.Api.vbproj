@@ -187,10 +187,10 @@
     <Compile Include="Attributes\CustomAuthorizeAttribute.vb" />
     <Compile Include="Controllers\Admin\Identity\IdentityUtilityController.vb" />
     <Compile Include="Controllers\Admin\Identity\AccountController.vb" />
-    <Compile Include="Controllers\Admin\Register\RoleController.vb" />
-    <Compile Include="Controllers\Admin\Register\UserController.vb" />
-    <Compile Include="Controllers\Admin\Registration\CustomerController.vb" />
-    <Compile Include="Controllers\Admin\Registration\ProductController.vb" />
+    <Compile Include="Controllers\Admin\Configuration\RoleController.vb" />
+    <Compile Include="Controllers\Admin\Configuration\UserController.vb" />
+    <Compile Include="Controllers\Admin\Register\CustomerController.vb" />
+    <Compile Include="Controllers\Admin\Register\ProductController.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -208,10 +208,10 @@
     <Compile Include="Models\Identity\RemoveLoginBindingModel.vb" />
     <Compile Include="Models\Identity\SendCodeModel.vb" />
     <Compile Include="Models\Identity\VerifyCodeModel.vb" />
-    <Compile Include="Models\Registration\CustomerAddressModel.vb" />
-    <Compile Include="Models\Registration\CustomerModel.vb" />
-    <Compile Include="Models\Registration\ProductCategoryModel.vb" />
-    <Compile Include="Models\Registration\ProductModel.vb" />
+    <Compile Include="Models\Register\CustomerAddressModel.vb" />
+    <Compile Include="Models\Register\CustomerModel.vb" />
+    <Compile Include="Models\Register\ProductCategoryModel.vb" />
+    <Compile Include="Models\Register\ProductModel.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
