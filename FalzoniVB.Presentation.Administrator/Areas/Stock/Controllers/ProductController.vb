@@ -1,37 +1,37 @@
 ﻿Imports System.Net
 Imports System.Threading.Tasks
-Imports FalzoniVB.Presentation.Administrator.Clients.Interfaces.Register
+Imports FalzoniVB.Presentation.Administrator.Clients.Interfaces.Stock
 Imports FalzoniVB.Presentation.Administrator.Models.Common
-Imports FalzoniVB.Presentation.Administrator.Models.Register
-Imports FalzoniVB.Presentation.Administrator.Models.Tables.Register
+Imports FalzoniVB.Presentation.Administrator.Models.Stock
+Imports FalzoniVB.Presentation.Administrator.Models.Tables.Stock
 Imports FalzoniVB.Utils.Helpers
 Imports NLog
 
-Namespace Areas.Register.Controllers
-    <Authorize>
-    Public Class CustomerController
+Namespace Areas.Stock.Controllers
+    Public Class ProductController
         Inherits Controller
-        Private ReadOnly _customerClient As ICustomerClient
+
+        Private ReadOnly _productClient As IProductClient
         Private Shared ReadOnly _logger As Logger = LogManager.GetCurrentClassLogger()
 
-        Public Sub New(customerClient As ICustomerClient)
-            _customerClient = customerClient
+        Public Sub New(productClient As IProductClient)
+            _productClient = productClient
         End Sub
 
-        ' GET Register/Customer
+        ' GET Stock/Product
         Public Function Index() As ActionResult
             Return View()
         End Function
 
-        'GET Register/Customer/LoadTable
+        'GET Stock/Product/LoadTable
         <HttpGet>
         Public Async Function LoadTable() As Task(Of JsonResult)
 
-            Dim table = New CustomerTableModel()
+            Dim table = New ProductTableModel()
 
             Try
 
-                table = Await _customerClient.GetTableAsync(UrlConfigurationHelper.CustomerGetAll)
+                table = Await _productClient.GetTableAsync(UrlConfigurationHelper.ProductGetAll)
 
             Catch ex As Exception
                 _logger.Fatal("Ocorreu um erro: " + ex.ToString())
@@ -40,11 +40,11 @@ Namespace Areas.Register.Controllers
             Return Json(table, JsonRequestBehavior.AllowGet)
         End Function
 
-        'GET Register/Customer/Create
+        'GET Stock/Product/Create
         <HttpGet>
         Public Function Create() As ActionResult
 
-            Dim model = New CustomerModel()
+            Dim model = New ProductModel()
 
             Try
 
@@ -67,9 +67,9 @@ Namespace Areas.Register.Controllers
             End Try
         End Function
 
-        ' POST Register/Customer/Create
+        ' POST Stock/Product/Create
         <HttpPost>
-        Public Function Create(model As CustomerModel) As ActionResult
+        Public Function Create(model As ProductModel) As ActionResult
 
             If Not ModelState.IsValid Then
                 Return View(model)
@@ -77,7 +77,7 @@ Namespace Areas.Register.Controllers
 
             Try
 
-                Dim result As String = _customerClient.Add(UrlConfigurationHelper.CustomerCreate, model)
+                Dim result As String = _productClient.Add(UrlConfigurationHelper.ProductCreate, model)
 
                 TempData("Return") = New ReturnModel With
                 {
@@ -102,12 +102,12 @@ Namespace Areas.Register.Controllers
             End Try
         End Function
 
-        ' GET Register/Customer/Edit
+        ' GET Stock/Product/Edit
         <HttpGet>
         Public Async Function Edit(id As String) As Task(Of ActionResult)
             Try
 
-                Dim model = Await _customerClient.GetAsync(UrlConfigurationHelper.CustomerGet, id)
+                Dim model = Await _productClient.GetAsync(UrlConfigurationHelper.ProductGet, id)
 
                 Return View(model)
 
@@ -128,9 +128,9 @@ Namespace Areas.Register.Controllers
             End Try
         End Function
 
-        ' POST Register/Customer/Edit
+        ' POST Stock/Product/Edit
         <HttpPost>
-        Public Function Edit(model As CustomerModel) As ActionResult
+        Public Function Edit(model As ProductModel) As ActionResult
 
             If Not ModelState.IsValid Then
                 Return View(model)
@@ -138,7 +138,7 @@ Namespace Areas.Register.Controllers
 
             Try
 
-                Dim result As String = _customerClient.Update(UrlConfigurationHelper.CustomerEdit, model)
+                Dim result As String = _productClient.Update(UrlConfigurationHelper.ProductEdit, model)
 
                 TempData("Return") = New ReturnModel With
                 {
@@ -163,15 +163,15 @@ Namespace Areas.Register.Controllers
             End Try
         End Function
 
-        'POST Register/Customer/Delete
+        'POST Stock/Product/Delete
         <HttpPost>
-        Public Async Function Delete(model As CustomerModel) As Task(Of ActionResult)
+        Public Async Function Delete(model As ProductModel) As Task(Of ActionResult)
 
             'List<string> errorsList = New List<string>()
 
             Try
 
-                Dim result As String = Await _customerClient.DeleteAsync(UrlConfigurationHelper.CustomerDelete, model)
+                Dim result As String = Await _productClient.DeleteAsync(UrlConfigurationHelper.ProductDelete, model)
 
                 Return Json(New With {.success = True, .message = result})
             Catch ex As ApplicationException

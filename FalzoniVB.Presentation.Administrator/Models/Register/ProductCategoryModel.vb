@@ -1,4 +1,5 @@
 ﻿Imports FalzoniVB.Presentation.Administrator.Models.Base
+Imports FalzoniVB.Presentation.Administrator.Models.Stock
 
 Namespace Models.Register
     Public Class ProductCategoryModel
