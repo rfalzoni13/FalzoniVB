@@ -1,7 +1,8 @@
 ﻿Imports FalzoniVB.Domain.DTO.Base
-Imports FalzoniVB.Domain.Entities.Register
+Imports FalzoniVB.Domain.DTO.Register
+Imports FalzoniVB.Domain.Entities.Stock
 
-Namespace DTO.Register
+Namespace DTO.Stock
     Public Class ProductDTO
         Inherits BaseDTO
 
