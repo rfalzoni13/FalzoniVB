@@ -1,8 +1,9 @@
-﻿Imports FalzoniVB.Domain.DTO.Register
+﻿Imports FalzoniVB.Domain.DTO.Stock
 Imports FalzoniVB.Domain.Interfaces.Repositories.Base
 Imports FalzoniVB.Domain.Interfaces.Repositories.Register
+Imports FalzoniVB.Domain.Interfaces.Repositories.Stock
 
-Namespace Register
+Namespace Stock
     Public Class ProductService
         Private ReadOnly _productRepository As IProductRepository
         Private ReadOnly _productCategoryRepository As IProductCategoryRepository
