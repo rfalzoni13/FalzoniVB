@@ -140,7 +140,7 @@
     <Compile Include="Configuration\Register\CustomerAddressMapConfiguration.vb" />
     <Compile Include="Configuration\Register\CustomerMapConfiguration.vb" />
     <Compile Include="Configuration\Register\ProductCategoryMapConfiguration.vb" />
-    <Compile Include="Configuration\Register\ProductMapConfiguration.vb" />
+    <Compile Include="Configuration\Stock\ProductMapConfiguration.vb" />
     <Compile Include="Context\FalzoniContext.vb" />
     <Compile Include="Context\MySql\FalzoniMySqlContext.vb" />
     <Compile Include="Context\SqlServer\FalzoniSqlServerContext.vb" />
@@ -166,7 +166,7 @@
     <Compile Include="Repositories\Register\CustomerAddressRepository.vb" />
     <Compile Include="Repositories\Register\CustomerRepository.vb" />
     <Compile Include="Repositories\Register\ProductCategoryRepository.vb" />
-    <Compile Include="Repositories\Register\ProductRepository.vb" />
+    <Compile Include="Repositories\Stock\ProductRepository.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
