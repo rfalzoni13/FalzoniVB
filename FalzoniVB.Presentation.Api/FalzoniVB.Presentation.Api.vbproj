@@ -190,7 +190,7 @@
     <Compile Include="Controllers\Admin\Configuration\RoleController.vb" />
     <Compile Include="Controllers\Admin\Configuration\UserController.vb" />
     <Compile Include="Controllers\Admin\Register\CustomerController.vb" />
-    <Compile Include="Controllers\Admin\Register\ProductController.vb" />
+    <Compile Include="Controllers\Admin\Stock\ProductController.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -211,7 +211,7 @@
     <Compile Include="Models\Register\CustomerAddressModel.vb" />
     <Compile Include="Models\Register\CustomerModel.vb" />
     <Compile Include="Models\Register\ProductCategoryModel.vb" />
-    <Compile Include="Models\Register\ProductModel.vb" />
+    <Compile Include="Models\Stock\ProductModel.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

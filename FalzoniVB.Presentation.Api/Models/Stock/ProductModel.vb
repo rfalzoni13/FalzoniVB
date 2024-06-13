@@ -1,7 +1,8 @@
-﻿Imports FalzoniVB.Domain.DTO.Register
+﻿Imports FalzoniVB.Domain.DTO.Stock
 Imports FalzoniVB.Presentation.Api.Models.Base
+Imports FalzoniVB.Presentation.Api.Models.Register
 
-Namespace Models.Register
+Namespace Models.Stock
     Public Class ProductModel
         Inherits BaseModel
 
