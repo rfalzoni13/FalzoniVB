@@ -11,6 +11,10 @@ Imports FalzoniVB.Infra.Data.Repositories.Register
 Imports FalzoniVB.Service.Register
 Imports FalzoniVB.Utils.Helpers
 Imports Unity
+Imports FalzoniVB.Domain.Interfaces.Repositories.Stock
+Imports FalzoniVB.Infra.Data.Repositories.Stock
+Imports FalzoniVB.Service.Stock
+Imports FalzoniVB.Application.ServiceApplication.Stock
 
 Public Class UnityModule
     Public Shared Function LoadModules() As UnityContainer
