@@ -1,7 +1,7 @@
-﻿Imports FalzoniVB.Domain.DTO.Register
-Imports FalzoniVB.Service.Register
+﻿Imports FalzoniVB.Domain.DTO.Stock
+Imports FalzoniVB.Service.Stock
 
-Namespace ServiceApplication.Register
+Namespace ServiceApplication.Stock
     Public Class ProductServiceApplication
         Private ReadOnly _productService As ProductService
 
