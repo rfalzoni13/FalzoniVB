@@ -134,8 +134,8 @@ Namespace Areas.Configuration.Controllers
         End Function
 
         ' POST Register/User/Edit
-        <HttpPost>
         <UserRegister>
+        <HttpPost>
         Public Function Edit(model As UserModel) As ActionResult
 
             If Not ModelState.IsValid Then
