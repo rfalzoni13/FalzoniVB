@@ -1,12 +1,10 @@
-﻿Imports System.Collections.Generic
-Imports System.Linq
-Imports System.Web
-Imports System.Web.Optimization
+﻿Imports System.Web.Optimization
+Imports FalzoniVB.Utils.Helpers
 
 Public Class BundleConfig
     ' Para obter mais informações sobre o Agrupamento, visite https://go.microsoft.com/fwlink/?LinkID=303951
     Public Shared Sub RegisterBundles(ByVal bundles As BundleCollection)
-        RegisterJQueryScriptManager()
+        'RegisterJQueryScriptManager()
 
         bundles.Add(New ScriptBundle("~/bundles/WebFormsJs").Include(
                         "~/Scripts/WebForms/WebForms.js",
@@ -29,17 +27,37 @@ Public Class BundleConfig
         ' pronto para a produção, utilize a ferramenta de build em https://modernizr.com para escolher somente os testes que precisa
         ' bundles.Add(New ScriptBundle("~/bundles/modernizr").Include(
         '                "~/Scripts/Libraries/modernizr-*"))
+
+        RegisterJQueryBundle(bundles)
     End Sub
 
-    Public Shared Sub RegisterJQueryScriptManager()
-        Dim jQueryScriptResourceDefinition As New ScriptResourceDefinition
-        With jQueryScriptResourceDefinition
-            .Path = "~/scripts/libraries/jquery/jquery-3.7.1.min.js"
-            .DebugPath = "~/scripts/libraries/jquery/jquery-3.7.1.js"
-            .CdnPath = "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.min.js"
-            .CdnDebugPath = "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.js"
-        End With
+    Public Shared Sub RegisterJQueryBundle(bundles As BundleCollection)
+        bundles.UseCdn = Not ConfigurationHelper.IsBundleled
 
-        ScriptManager.ScriptResourceMapping.AddDefinition("jquery", jQueryScriptResourceDefinition)
+        Dim cdnPath As String = "https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.1.min.js"
+
+        If Debugger.IsAttached Then
+            cdnPath = "https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.1.js"
+            BundleTable.EnableOptimizations = True
+        End If
+
+        Dim scriptBundle = New ScriptBundle("~/Scripts/jquery", cdnPath)
+        If (ConfigurationHelper.IsBundleled) Then
+            scriptBundle.Include("~/Scripts/Libraries/jquery/jquery-*")
+        End If
+
+        bundles.Add(scriptBundle)
     End Sub
+
+    'Public Shared Sub RegisterJQueryScriptManager()
+    '    Dim jQueryScriptResourceDefinition As New ScriptResourceDefinition
+    '    With jQueryScriptResourceDefinition
+    '        .Path = "~/scripts/libraries/jquery/jquery-3.7.1.min.js"
+    '        .DebugPath = "~/scripts/libraries/jquery/jquery-3.7.1.js"
+    '        .CdnPath = "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.min.js"
+    '        .CdnDebugPath = "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.js"
+    '    End With
+
+    '    ScriptManager.ScriptResourceMapping.AddDefinition("jquery", jQueryScriptResourceDefinition)
+    'End Sub
 End Class

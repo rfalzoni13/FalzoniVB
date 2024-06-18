@@ -29,7 +29,7 @@
                 <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
                 <%--Framework Scripts--%>
                 <asp:ScriptReference Name="MsAjaxBundle" />
-                <asp:ScriptReference Name="jquery" />
+                <%--<asp:ScriptReference Name="jquery" />--%>
                 <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
                 <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
                 <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
@@ -89,11 +89,13 @@
 
     </form>
     <asp:PlaceHolder runat="server">
-          <%If FalzoniVB.Utils.Helpers.ConfigurationHelper.IsBundleled Then%>
-              <%: Scripts.Render("~/Scripts/Libraries/bootstrap/bootstrap.js") %>
-          <%Else%>
-              <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-          <%End If%>
+        <%:Scripts.Render("~/Scripts/jquery")%>
+
+        <%If FalzoniVB.Utils.Helpers.ConfigurationHelper.IsBundleled Then%>
+            <%: Scripts.Render("~/Scripts/Libraries/bootstrap/bootstrap.js") %>
+        <%Else%>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+        <%End If%>
     </asp:PlaceHolder>
 </body>
 </html>
