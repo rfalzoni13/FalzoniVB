@@ -1,4 +1,5 @@
 ﻿Imports FalzoniVB.Domain.DTO.Base
+Imports FalzoniVB.Domain.DTO.Stock
 Imports FalzoniVB.Domain.Entities.Register
 
 Namespace DTO.Register

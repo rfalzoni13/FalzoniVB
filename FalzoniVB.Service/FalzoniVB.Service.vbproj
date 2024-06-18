@@ -149,7 +149,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Register\CustomerService.vb" />
-    <Compile Include="Register\ProductService.vb" />
+    <Compile Include="Stock\ProductService.vb" />
     <Compile Include="Senders\Email\EmailIdentityMessageService.vb" />
     <Compile Include="Senders\Sms\SmsTwilioMessageService.vb" />
   </ItemGroup>

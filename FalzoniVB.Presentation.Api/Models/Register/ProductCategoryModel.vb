@@ -1,5 +1,7 @@
 ﻿Imports FalzoniVB.Domain.DTO.Register
+Imports FalzoniVB.Domain.DTO.Stock
 Imports FalzoniVB.Presentation.Api.Models.Base
+Imports FalzoniVB.Presentation.Api.Models.Stock
 
 Namespace Models.Register
     Public Class ProductCategoryModel

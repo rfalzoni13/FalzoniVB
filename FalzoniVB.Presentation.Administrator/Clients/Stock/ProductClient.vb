@@ -1,13 +1,13 @@
 ﻿Imports System.Net.Http
 Imports System.Threading.Tasks
 Imports FalzoniVB.Presentation.Administrator.Clients.Base
-Imports FalzoniVB.Presentation.Administrator.Clients.Interfaces.Register
+Imports FalzoniVB.Presentation.Administrator.Clients.Interfaces.Stock
 Imports FalzoniVB.Presentation.Administrator.Models.Common
-Imports FalzoniVB.Presentation.Administrator.Models.Register
-Imports FalzoniVB.Presentation.Administrator.Models.Tables.Register
+Imports FalzoniVB.Presentation.Administrator.Models.Stock
+Imports FalzoniVB.Presentation.Administrator.Models.Tables.Stock
 Imports FalzoniVB.Utils.Helpers
 
-Namespace Clients.Register
+Namespace Clients.Stock
     Public Class ProductClient
         Inherits BaseClient(Of ProductModel, ProductTableModel)
         Implements IProductClient

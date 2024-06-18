@@ -1,7 +1,8 @@
 ﻿Imports System.ComponentModel.DataAnnotations
 Imports FalzoniVB.Presentation.Administrator.Models.Base
+Imports FalzoniVB.Presentation.Administrator.Models.Register
 
-Namespace Models.Register
+Namespace Models.Stock
     Public Class ProductModel
         Inherits BaseModel
 

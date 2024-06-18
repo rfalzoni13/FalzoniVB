@@ -1,6 +1,7 @@
 ﻿Imports FalzoniVB.Domain.Entities.Base
+Imports FalzoniVB.Domain.Entities.Register
 
-Namespace Entities.Register
+Namespace Entities.Stock
     Public Class Product
         Inherits BaseEntity
 

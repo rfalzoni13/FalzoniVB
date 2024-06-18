@@ -1,7 +1,7 @@
 ﻿Imports System.Data.Entity.ModelConfiguration
-Imports FalzoniVB.Domain.Entities.Register
+Imports FalzoniVB.Domain.Entities.Stock
 
-Namespace Configuration.Register
+Namespace Configuration.Stock
     Public Class ProductMapConfiguration
         Inherits EntityTypeConfiguration(Of Product)
 

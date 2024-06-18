@@ -1,12 +1,12 @@
 ﻿Imports System.Net
 Imports System.Net.Http
 Imports System.Web.Http
-Imports FalzoniVB.Application.ServiceApplication.Register
-Imports FalzoniVB.Presentation.Api.Models.Register
+Imports FalzoniVB.Application.ServiceApplication.Stock
+Imports FalzoniVB.Presentation.Api.Models.Stock
 Imports FalzoniVB.Presentation.Api.Utils
 Imports NLog
 
-Namespace Controllers.Admin.Register
+Namespace Controllers.Admin.Stock
     <CustomAuthorize(Roles:="Administrator")>
     <RoutePrefix("Api/Product")>
     Public Class ProductController

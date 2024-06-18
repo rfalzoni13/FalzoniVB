@@ -1,7 +1,7 @@
 ﻿Imports FalzoniVB.Presentation.Administrator.Models.Base
 Imports FalzoniVB.Presentation.Administrator.Models.Tables.Base
 
-Namespace Models.Tables.Register
+Namespace Models.Tables.Stock
     Public Class ProductTableModel
         Inherits TableBase
 

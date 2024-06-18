@@ -136,7 +136,7 @@
     <Compile Include="ServiceApplication\Configuration\RoleServiceApplication.vb" />
     <Compile Include="ServiceApplication\Configuration\UserServiceApplication.vb" />
     <Compile Include="ServiceApplication\Register\CustomerServiceApplication.vb" />
-    <Compile Include="ServiceApplication\Register\ProductServiceApplication.vb" />
+    <Compile Include="ServiceApplication\Stock\ProductServiceApplication.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

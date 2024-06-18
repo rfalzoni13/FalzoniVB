@@ -54,6 +54,14 @@ Namespace Helpers
         Public Shared Property CustomerDelete As String
 #End Region
 
+#Region "Product"
+        Public Shared Property ProductGetAll As String
+        Public Shared Property ProductGet As String
+        Public Shared Property ProductCreate As String
+        Public Shared Property ProductEdit As String
+        Public Shared Property ProductDelete As String
+#End Region
+
 
         Public Shared Sub SetUrlList()
 #Region "Path"
@@ -106,6 +114,14 @@ Namespace Helpers
             CustomerCreate = $"{PathUrl}/{ConfigurationManager.AppSettings("CustomerUrl")}/Create"
             CustomerEdit = $"{PathUrl}/{ConfigurationManager.AppSettings("CustomerUrl")}/Update"
             CustomerDelete = $"{PathUrl}/{ConfigurationManager.AppSettings("CustomerUrl")}/Delete"
+#End Region
+
+#Region "Product"
+            ProductGetAll = $"{PathUrl}/{ConfigurationManager.AppSettings("ProductUrl")}/GetAll"
+            ProductGet = $"{PathUrl}/{ConfigurationManager.AppSettings("ProductUrl")}/Get"
+            ProductCreate = $"{PathUrl}/{ConfigurationManager.AppSettings("ProductUrl")}/Create"
+            ProductEdit = $"{PathUrl}/{ConfigurationManager.AppSettings("ProductUrl")}/Update"
+            ProductDelete = $"{PathUrl}/{ConfigurationManager.AppSettings("ProductUrl")}/Delete"
 #End Region
         End Sub
     End Class

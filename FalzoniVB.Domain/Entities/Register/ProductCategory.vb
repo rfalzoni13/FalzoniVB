@@ -1,4 +1,5 @@
 ﻿Imports FalzoniVB.Domain.Entities.Base
+Imports FalzoniVB.Domain.Entities.Stock
 
 Namespace Entities.Register
     Public Class ProductCategory
