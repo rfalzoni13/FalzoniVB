@@ -9,7 +9,9 @@ Public Class MvcApplication
         AreaRegistration.RegisterAllAreas()
         FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters)
         RouteConfig.RegisterRoutes(RouteTable.Routes)
-        BundleConfig.RegisterBundles(BundleTable.Bundles)
+        If FalzoniVB.Utils.Helpers.ConfigurationHelper.IsBundleled Then
+            BundleConfig.RegisterBundles(BundleTable.Bundles)
+        End If
         AntiForgeryConfig.UniqueClaimTypeIdentifier = ClaimTypes.NameIdentifier
     End Sub
 End Class

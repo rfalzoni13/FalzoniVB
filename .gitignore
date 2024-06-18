@@ -361,5 +361,13 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
-/FalzoniVB.Presentation.Administrator/log.txt
+
+# Custom folders and files
 /FalzoniVB.Presentation.Api/log.txt
+/FalzoniVB.Presentation.Administrator/log.txt
+/FalzoniVB.Presentation.Administrator/Content/libraries
+/FalzoniVB.Presentation.Administrator/Content/fonts
+/FalzoniVB.Presentation.Administrator/Scripts/libraries
+/FalzoniVB.Presentation.Web/Content/fonts
+/FalzoniVB.Presentation.Web/Content/Libraries
+/FalzoniVB.Presentation.Web/Scripts/Libraries

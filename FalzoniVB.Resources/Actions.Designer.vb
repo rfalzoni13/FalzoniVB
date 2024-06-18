@@ -72,5 +72,14 @@ Namespace My.Resources
                 Return ResourceManager.GetString("Enter", resourceCulture)
             End Get
         End Property
+        
+        '''<summary>
+        '''  Consulta uma cadeia de caracteres localizada semelhante a Enviar.
+        '''</summary>
+        Public Shared ReadOnly Property Send() As String
+            Get
+                Return ResourceManager.GetString("Send", resourceCulture)
+            End Get
+        End Property
     End Class
 End Namespace

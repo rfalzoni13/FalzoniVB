@@ -6,14 +6,25 @@
     <!-- Tell the browser to be responsive to screen width -->
     <title>Projeto Falzoni - @ViewData("Title")</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    @Styles.Render("~/bundles/bootstrap")
-    @Styles.Render("~/bundles/admin-lte")
-    <link rel="stylesheet" href="@(Url.Content("~/Content/libraries/admin-lte/skins/_all-skins.css"))" />
-    <link rel="stylesheet" href="@(Url.Content("~/Content/Site.css"))" />
-    @Scripts.Render("~/bundles/modernizr")
+
+    @If FalzoniVB.Utils.Helpers.ConfigurationHelper.IsBundleled Then
+        @Styles.Render("~/bundles/bootstrap")
+        @Styles.Render("~/bundles/admin-lte")
+        @Scripts.Render("~/bundles/modernizr")
+    Else
+        @<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+        @<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.0/css/AdminLTE.min.css" integrity="sha512-WwxBYWUrN/LPCceidkNpgYFBiIjrickdz+Ts+55PAzTJ9sSP8EVfId6lq0cl3/kSnGECF/7v3p3BnCLkvVhs/w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        @<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.0/css/skins/_all-skins.min.css" integrity="sha512-D231SkmJ+61oWzyBS0Htmce/w1NLwUVtMSA05ceaprOG4ZAszxnScjexIQwdAr4bZ4NRNdSHH1qXwu1GwEVnvA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        @<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.3/skins/square/_all.min.css" integrity="sha512-Si0tdN9RhAc4k9mvo3AqFVLXyCMxM0+Tx1W1upLlnTSnQGakisa7IYapyEWbwMba0lu3USKjLO82VB/j1K6F9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        @<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        @<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha512-3n19xznO0ubPpSwYCRRBgHh63DrV+bdZfHK52b1esvId4GsfwStQNPJFjeQos2h3JwCmZl0/LgLxSKMAI55hgw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    End If
+
+    @Styles.Render("~/Content/Site.css")
+
     @RenderSection("styles", required:=False)
 </head>
-<body class="hold-transition @System.Configuration.ConfigurationManager.AppSettings("CorHeader") sidebar-mini fixed">
+<body class="hold-transition @System.Configuration.ConfigurationManager.AppSettings("HeaderColor") sidebar-mini fixed">
 
     <div class="loading">
         <div class="loader"></div>
@@ -42,38 +53,39 @@
                     <ul class="nav navbar-nav">
                         <!-- Messages: style can be found in dropdown.less-->
                         <!--<li class="dropdown messages-menu">-->
-                              <!-- Menu toggle button -->
-                              <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-envelope-o"></i>
-                                <span class="label label-success">4</span>
-                              </a>
-                              <ul class="dropdown-menu">
-                                <li class="header">You have 4 messages</li>
-                                <li>-->
-                                  <!-- inner menu: contains the messages -->
-                                  <!--<ul class="menu">
-                                    <li>--><!-- start message -->
-                                      <!--<a href="#">
-                                        <div class="pull-left">-->
-                                          <!-- User Image -->
-                                          <!--<img src="~/admin-lte/img/user4-128x128.jpg" class="img-circle" alt="User Image">
-                                        </div>-->
-                                        <!-- Message title and timestamp -->
-                                        <!--<h4>
-                                          Support Team
-                                          <small><i class="fa fa-clock-o"></i> 5 mins</small>
-                                        </h4>-->
-                                        <!-- The message -->
-                                        <!--<p>Why not buy a new awesome theme?</p>
-                                      </a>
-                                    </li>-->
-                                    <!-- end message -->
-                                  <!--</ul>-->
-                                  <!-- /.menu -->
-                                <!--</li>
-                                <li class="footer"><a href="#">See All Messages</a></li>
-                              </ul>
-                            </li>-->
+                        <!-- Menu toggle button -->
+                        <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                          <i class="fa fa-envelope-o"></i>
+                          <span class="label label-success">4</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li class="header">You have 4 messages</li>
+                          <li>-->
+                        <!-- inner menu: contains the messages -->
+                        <!--<ul class="menu">
+                          <li>-->
+                        <!-- start message -->
+                        <!--<a href="#">
+                          <div class="pull-left">-->
+                        <!-- User Image -->
+                        <!--<img src="~/admin-lte/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                        </div>-->
+                        <!-- Message title and timestamp -->
+                        <!--<h4>
+                          Support Team
+                          <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                        </h4>-->
+                        <!-- The message -->
+                        <!--<p>Why not buy a new awesome theme?</p>
+                          </a>
+                        </li>-->
+                        <!-- end message -->
+                        <!--</ul>-->
+                        <!-- /.menu -->
+                        <!--</li>
+                            <li class="footer"><a href="#">See All Messages</a></li>
+                          </ul>
+                        </li>-->
                         <!-- /.messages-menu -->
                         <!-- Notifications Menu -->
                         <li class="dropdown notifications-menu">
@@ -182,99 +194,111 @@
                                     </div>
                                     @using Html.BeginForm("LogOut", "Account", New With {.area = String.Empty}, FormMethod.Post)
                                         @<div Class="pull-right">
-                                            <Button type = "submit" Class="btn btn-default btn-flat">Sair</button>
+                                            <Button type="submit" Class="btn btn-default btn-flat">Sair</Button>
                                         </div>
                                     End Using
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <!-- Control Sidebar Toggle Button -->
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Control Sidebar Toggle Button -->
                         @*<li>
                               <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
                             </li>*@
-                                            </ul>
-                                        </div>
-                                    </nav>
+                    </ul>
+                </div>
+            </nav>
 
-                                </header>
+        </header>
 
-                                <!-- Left side column. contains the logo and sidebar -->
-                                <aside class="main-sidebar">
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
 
-                                    <!-- sidebar: style can be found in sidebar.less -->
-                                    <section class="sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
 
-                        @*<!-- Sidebar user panel (optional) -->
-                            <div class="user-panel">
-                              <div class="pull-left image">
-                                <img src="~/admin-lte/img/user4-128x128.jpg" class="img-circle" alt="User Image">
-                              </div>
-                              <div class="pull-left info">
-                                <p>Renato Falzoni</p>
-                                <!-- Status -->
-                                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-                              </div>
-                            </div>*@
+                @*<!-- Sidebar user panel (optional) -->
+                    <div class="user-panel">
+                        <div class="pull-left image">
+                        <img src="~/admin-lte/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                        </div>
+                        <div class="pull-left info">
+                        <p>Renato Falzoni</p>
+                        <!-- Status -->
+                        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                        </div>
+                    </div>*@
 
-                                        <!-- search form (Optional) -->
-                        @*<form action="#" method="get" class="sidebar-form">
-                                <div class="input-group">
-                                    <input type="text" name="q" class="form-control" placeholder="Pesquisar aqui...">
-                                    <span class="input-group-btn">
-                                        <button type="submit" name="search" id="search-btn" class="btn btn-flat">
-                                            <i class="fa fa-search"></i>
-                                        </button>
-                                    </span>
-                                </div>
-                            </form>*@
-                                        <!-- /.search form -->
-                                        <!-- Sidebar Menu -->
-                                        <ul class="sidebar-menu" data-widget="tree">
-                                            <li class="header">Menu Principal</li>
-                                            <!-- Optionally, you can add icons to the links -->
-                                            <li class="treeview">
-                                                <a href="#">
-                                                    <i class="glyphicon glyphicon-edit"></i> <span>Cadastro</span>
-                                                    <span class="pull-right-container">
-                                                        <i class="fa fa-angle-left pull-right"></i>
-                                                    </span>
-                                                </a>
-                                                <ul class="treeview-menu">
-                                                    <li class="@(If(ViewContext.RouteData.Values("controller").ToString() = "Customer", "active", String.Empty))"><a href="@Url.Action("Index", "Customer", New With {.area = "Register"})"><i class="fa fa-user-o"></i> Clientes</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="treeview">
-                                                <a href="#">
-                                                    <i class="glyphicon glyphicon-cog"></i> <span>Configurações</span>
-                                                    <span class="pull-right-container">
-                                                        <i class="fa fa-angle-left pull-right"></i>
-                                                    </span>
-                                                </a>
-                                                <ul class="treeview-menu">
-                                                    <li class="@(If(ViewContext.RouteData.Values("controller").ToString() = "User", "active", String.Empty))"><a href="@Url.Action("Index", "User", New With {.area = "Configuration"})"><i class="fa fa-user-o"></i> Usuários</a></li>
-                                                </ul>
-                                            </li>
-                                            @*<li class="@(ViewContext.RouteData.Values("controller").ToString() == "Configuracao" ? "active" : "")"><a href="@Url.Action("Index", "Configuracao")"><i class="fa fa-gears"></i> <span>Configurações</span></a></li>*@
-                                        </ul>
-                                        <!-- /.sidebar-menu -->
-                                    </section>
-                                    <!-- /.sidebar -->
-                                </aside>
+                <!-- search form (Optional) -->
+                @*<form action="#" method="get" class="sidebar-form">
+                        <div class="input-group">
+                            <input type="text" name="q" class="form-control" placeholder="Pesquisar aqui...">
+                            <span class="input-group-btn">
+                                <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </form>*@
+                <!-- /.search form -->
+                <!-- Sidebar Menu -->
+                <ul class="sidebar-menu" data-widget="tree">
+                    <li class="header">Menu Principal</li>
+                    <!-- Optionally, you can add icons to the links -->
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="glyphicon glyphicon-edit"></i> <span>Cadastro</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li class="@(If(ViewContext.RouteData.Values("controller").ToString() = "Customer", "active", String.Empty))"><a href="@Url.Action("Index", "Customer", New With {.area = "Register"})"><i class="fa fa-user-o"></i> Clientes</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="glyphicon glyphicon-cog"></i> <span>Configurações</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li class="@(If(ViewContext.RouteData.Values("controller").ToString() = "User", "active", String.Empty))"><a href="@Url.Action("Index", "User", New With {.area = "Configuration"})"><i class="fa fa-user-o"></i> Usuários</a></li>
+                        </ul>
+                    </li>
+                    @*<li class="@(ViewContext.RouteData.Values("controller").ToString() == "Configuracao" ? "active" : "")"><a href="@Url.Action("Index", "Configuracao")"><i class="fa fa-gears"></i> <span>Configurações</span></a></li>*@
+                </ul>
+                <!-- /.sidebar-menu -->
+            </section>
+            <!-- /.sidebar -->
+        </aside>
 
-                        @RenderBody()
+        @RenderBody()
 
-                        @Html.Partial("_Footer")
+        @Html.Partial("_Footer")
 
-                        @*@Html.Partial("_SideBar")*@
+        @*@Html.Partial("_SideBar")*@
 
-                            </div>
+    </div>
 
-                        @RenderSection("modals", required:=False)
-                            <!-- ./wrapper -->
-                        @Scripts.Render("~/bundles/jquery")
-                        @Scripts.Render("~/bundles/js/bootstrap")
-                        @Scripts.Render("~/bundles/js/admin-lte")
-                        @Scripts.Render("~/bundles/js/core")
-                        @RenderSection("scripts", required:=False)
+    @RenderSection("modals", required:=False)
+    <!-- ./wrapper -->
+
+    @If FalzoniVB.Utils.Helpers.ConfigurationHelper.IsBundleled Then
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/js/bootstrap")
+        @Scripts.Render("~/bundles/js/admin-lte")
+        @Scripts.Render("~/bundles/js/core")
+    Else
+        @<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        @<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+        @<script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.0/js/adminlte.min.js" integrity="sha512-4LW2vmg8t+drPiNqhkUrtVZ3M/UCyhEhVasHYx7d+mXKjcw/G0BSuQ78FnkzPyWU23QBXtTUrKoPmX95KTLE4A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        @<script src="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.3/icheck.min.js" integrity="sha512-RGDpUuNPNGV62jwbX1n/jNVUuK/z/GRbasvukyOim4R8gUEXSAjB4o0gBplhpO8Mv9rr7HNtGzV508Q1LBGsfA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        @Scripts.Render("~/Scripts/core/root.js")
+        @Scripts.Render("~/Scripts/core/routes.js")
+    End If
+
+    @RenderSection("scripts", required:=False)
 </body>
 </html>

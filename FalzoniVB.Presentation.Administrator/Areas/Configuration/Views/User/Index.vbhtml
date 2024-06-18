@@ -4,7 +4,11 @@
 End Code
 
 @Section styles
-    @Styles.Render("~/bundles/datatable")
+    @If FalzoniVB.Utils.Helpers.ConfigurationHelper.IsBundleled Then
+        @Styles.Render("~/bundles/datatable")
+    Else
+        @<link href="https://cdn.datatables.net/v/bs/jszip-3.10.1/dt-2.0.8/b-3.0.2/b-html5-3.0.2/b-print-3.0.2/r-3.0.2/sc-2.4.3/datatables.min.css" rel="stylesheet">
+    End If
 End Section
 
 <!-- Content Wrapper. Contains page content -->
@@ -80,7 +84,18 @@ End Section
 End Section
 
 @section scripts
-    @Scripts.Render("~/bundles/js/datatable")
-    @Scripts.Render("~/bundles/js/moment")
-    <script type="text/javascript" src="@Url.Content("~/Scripts/configuration/user/main.js")"></script>
+    @If FalzoniVB.Utils.Helpers.ConfigurationHelper.IsBundleled Then
+        @Scripts.Render("~/bundles/js/datatable")
+        @Scripts.Render("~/bundles/js/moment")
+    Else
+        @<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+        @<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+        @<script src="https://cdn.datatables.net/v/bs/jszip-3.10.1/dt-2.0.8/b-3.0.2/b-html5-3.0.2/b-print-3.0.2/r-3.0.2/sc-2.4.3/datatables.min.js"></script>
+        @<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js" integrity="sha512-QkuqGuFAgaPp3RTyTyJZnB1IuwbVAqpVGN58UJ93pwZel7NZ8wJOGmpO1zPxZGehX+0pc9/dpNG9QdL52aI4Cg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        @<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment-with-locales.min.js" integrity="sha512-yT/SWoCe2HVxCkQHbD+kjcQCxDld8tCyij/NH8bO36Ae4HDKhd8n2xJy7E22ETNpxXPr4hfY/UACaSEdSn7mtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        @Scripts.Render("~/Scripts/core/datatable-utils.js")
+    End If
+
+    @Scripts.Render("~/Scripts/configuration/user/main.js")
 End Section

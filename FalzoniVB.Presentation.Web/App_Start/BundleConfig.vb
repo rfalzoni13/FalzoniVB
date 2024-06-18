@@ -27,8 +27,8 @@ Public Class BundleConfig
 
         ' Use a versão de Desenvolvimento do Modernizr para se desenvolver e aprender com ele. Em seguida, quando estiver
         ' pronto para a produção, utilize a ferramenta de build em https://modernizr.com para escolher somente os testes que precisa
-        bundles.Add(New ScriptBundle("~/bundles/modernizr").Include(
-                        "~/Scripts/Libraries/modernizr-*"))
+        ' bundles.Add(New ScriptBundle("~/bundles/modernizr").Include(
+        '                "~/Scripts/Libraries/modernizr-*"))
     End Sub
 
     Public Shared Sub RegisterJQueryScriptManager()

@@ -50,6 +50,7 @@ Public Module BundleConfig
 
         bundles.Add(New StyleBundle("~/bundles/admin-lte").Include(
                 "~/Content/libraries/admin-lte/AdminLTE.css",
+                "~/Content/libraries/admin-lte/skins/_all-skins.css",
                 "~/Content/libraries/icheck/skins/square/_all.css",
                 "~/Content/libraries/font-awesome.css"))
 
